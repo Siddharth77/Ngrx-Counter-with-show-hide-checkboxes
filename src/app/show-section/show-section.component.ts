@@ -11,9 +11,9 @@ export class ShowSectionComponent {
   isVisibilityToggle$: Observable<boolean>;
   checkedValue: string;
   categories: any[] = [
-    { name: 'A', key: 'A', id: 1 },
-    { name: 'B', key: 'B', id: 2 },
-    { name: 'C', key: 'C', id: 3 }
+    { name: 'A', key: 'A', id: 1, hidden: false },
+    { name: 'B', key: 'B', id: 2, hidden: false },
+    { name: 'C', key: 'C', id: 3, hidden: false }
   ];
 
   constructor(private store: Store<{ isVisibilityToggle: boolean }>) {

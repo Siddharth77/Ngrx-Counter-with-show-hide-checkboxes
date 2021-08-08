@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
+import { FormsModule } from '@angular/forms';
 import { checkboxConfigReducer } from './checkbox-config.reducer';
 // import { counterReducer } from './counter.reducer'; // to be added for counter
 
@@ -11,7 +12,8 @@ import { ShowSectionComponent } from './show-section/show-section.component';
 @NgModule({
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ isVisibilityToggle: checkboxConfigReducer })
+    StoreModule.forRoot({ isVisibilityToggle: checkboxConfigReducer }),
+    FormsModule
   ],
   declarations: [AppComponent, MyCounterComponent, ShowSectionComponent],
   bootstrap: [AppComponent]

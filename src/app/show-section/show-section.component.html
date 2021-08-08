@@ -3,7 +3,7 @@
   <label>Show Section:</label>
   <span *ngFor="let category of categories" class="checkboxes">
     <ng-container>
-      <input [id]="category.key" type="checkbox" [value]="category.key" (click)="toggleVisibility($event)">
+      <input [attr.id]="category.key" type="checkbox" [attr.value]="category.key" (click)="toggleVisibility($event)" [checked]="!category.hidden">
       <label [for]="category.key">{{ category.name }} </label>
     </ng-container>    
   </span>
