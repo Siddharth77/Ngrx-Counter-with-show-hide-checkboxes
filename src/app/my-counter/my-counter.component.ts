@@ -9,7 +9,6 @@ import { increment, decrement, reset } from '../counter.actions';
 })
 export class MyCounterComponent {
   count$: Observable<number>;
-  // isToggleVisibility$: Observable<boolean>;
 
   constructor(private store: Store<{ count: number }>) {
     this.count$ = store.select('count');

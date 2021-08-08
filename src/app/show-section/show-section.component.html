@@ -1,11 +1,7 @@
 <div>
+  <div>Is Visible: {{isVisibilityToggle$|async}}</div>
   <label>Show Section:</label>
   <span *ngFor="let category of categories" class="checkboxes">
-    <!-- <p-checkbox
-      value="category"
-      [value]="category"
-      [inputId]="category.key"
-    ></p-checkbox> -->
     <input id="category.key" type="checkbox" value="category" (click)="toggleVisibility()">
     <label [for]="category.key">{{ category.name }} </label>
   </span>
