@@ -10,9 +10,9 @@ import { TOGGLE_SECTION_VISIBILITY } from '../checkbox-config.actions';
 export class ShowSectionComponent {
   isVisibilityToggle$: Observable<boolean>;
   categories: any[] = [
-    { name: 'Cars', key: 'cars', id: 1 },
-    { name: 'Tons', key: 'tons', id: 2 },
-    { name: 'Csx', key: 'csxtIncrease', id: 3 }
+    { name: 'A', key: 'A', id: 1 },
+    { name: 'B', key: 'B', id: 2 },
+    { name: 'C', key: 'C', id: 3 }
   ];
 
   constructor(private store: Store<{ isVisibilityToggle: boolean }>) {
