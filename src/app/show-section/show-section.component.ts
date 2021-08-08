@@ -9,6 +9,7 @@ import { TOGGLE_SECTION_VISIBILITY } from '../checkbox-config.actions';
 })
 export class ShowSectionComponent {
   isVisibilityToggle$: Observable<boolean>;
+  checkedValue: string;
   categories: any[] = [
     { name: 'A', key: 'A', id: 1 },
     { name: 'B', key: 'B', id: 2 },
@@ -19,7 +20,8 @@ export class ShowSectionComponent {
     this.isVisibilityToggle$ = this.store.select('isVisibilityToggle');
   }
 
-  toggleVisibility() {
+  toggleVisibility(event) {
+    console.log(event.target.value);
     this.store.dispatch(TOGGLE_SECTION_VISIBILITY());
   }
 }
